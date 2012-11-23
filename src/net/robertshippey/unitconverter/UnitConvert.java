@@ -86,7 +86,6 @@ public class UnitConvert extends Activity implements OnClickListener {
 		return true;
 	}
 
-	@Override
 	public void onClick(View v) {
 		try {
 			toUnit.setText(getResources().getString(R.string.processing)
@@ -116,7 +115,7 @@ public class UnitConvert extends Activity implements OnClickListener {
 					factor = 10.0f;
 				} else if (convertTo.equals("ft")) {
 					factor = 0.032808399f;
-				} else if (convertTo.equals("ft")) {
+				} else if (convertTo.equals("in")) {
 					factor = 0.32808399f;
 				}
 			} else if (convertFrom.equals("mm")) {

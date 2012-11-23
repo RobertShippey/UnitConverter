@@ -31,7 +31,6 @@ public class About extends Activity {
         });
         
         ((Button)findViewById(R.id.website)).setOnClickListener(new OnClickListener(){
-			@Override
 			public void onClick(View v) {
 				Intent site = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.DevWebsite)));
 				startActivity(site);

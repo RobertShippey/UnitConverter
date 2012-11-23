@@ -49,7 +49,6 @@ public class ChangeUnits extends Activity {
 		
 		done.setOnClickListener(new OnClickListener(){
 
-			@Override
 			public void onClick(View arg0) {
 				
 				String selectedFrom = from.getSelectedItem().toString();
