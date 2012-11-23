@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,10 +31,14 @@ public class UnitConvert extends Activity implements OnClickListener {
 	private final int menuAbout = 0;
 	private final int menuUnits = 1;
 
+	private SQLiteDatabase db;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_unit_convert);
+		
+		db = (new UnitDatabase.DBHelper(this)).getWritableDatabase();
 
 		fromText = (TextView) findViewById(R.id.unitConverterFromTextView);
 		fromUnit = (EditText) findViewById(R.id.UnitConverterFromEditText);
@@ -98,40 +104,18 @@ public class UnitConvert extends Activity implements OnClickListener {
 			float from = Float.parseFloat(fromUnit.getText().toString());
 			float to = 0.0f;
 			float factor = 0.0f;
+			
+			Cursor c = db.query(
+				    UnitDatabase.tableName, 
+				    new String[]{UnitDatabase.columnFactor},
+				    UnitDatabase.columnFrom + " = ? AND " + UnitDatabase.columnTo + " = ?",
+				    new String[]{convertFrom, convertTo},
+				    null, null, null);
+			
+			c.moveToFirst();
+			factor = c.getFloat(0);
+			c.close();
 
-			if (convertFrom.equals("in")) {
-				if (convertTo.equals("cm")) {
-					factor = 2.54f;
-				} else if (convertTo.equals("ft")) {
-					factor = 0.0833333f;
-				} else if (convertTo.equals("mm")) {
-					factor = 25.4f;
-				}
-			} else if (convertFrom.equals("ft")) {
-				if (convertTo.equals("mm")) {
-					factor = 304.8f;
-				} else if (convertTo.equals("cm")) {
-					factor = 30.48f;
-				} else if (convertTo.equals("in")) {
-					factor = 12.0f;
-				}
-			} else if (convertFrom.equals("cm")) {
-				if (convertTo.equals("mm")) {
-					factor = 10.0f;
-				} else if (convertTo.equals("ft")) {
-					factor = 0.032808399f;
-				} else if (convertTo.equals("in")) {
-					factor = 0.32808399f;
-				}
-			} else if (convertFrom.equals("mm")) {
-				if (convertTo.equals("cm")) {
-					factor = 0.1f;
-				} else if (convertTo.equals("ft")) {
-					factor = 0.0032808399f;
-				} else if (convertTo.equals("in")) {
-					factor = 0.0393700787f;
-				}
-			}
 			to = from * factor;
 			if (to == 0) {
 				toUnit.setText(getResources().getString(R.string.error)
