@@ -3,6 +3,7 @@ package net.robertshippey.unitconverter;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +14,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class UnitConvert extends Activity implements OnClickListener {
+	
+	public static final String Prefs_FileName = "UnitConverterPreferences";
+	
 	private TextView fromText;
 	private EditText fromUnit;
 	private String convertFrom;
@@ -45,8 +49,9 @@ public class UnitConvert extends Activity implements OnClickListener {
 			convertTo = intentExtras.getString("to");
 
 		} catch (NullPointerException npe) {
-			convertFrom = "in";
-			convertTo = "cm";
+			SharedPreferences savedPrefs = getSharedPreferences(UnitConvert.Prefs_FileName, 0);
+			convertFrom = savedPrefs.getString("from", "in");
+			convertTo = savedPrefs.getString("to", "cm");
 		}
 
 		fromText.setText(getResources().getString(R.string.convertFrom)

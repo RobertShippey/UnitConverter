@@ -3,6 +3,7 @@ package net.robertshippey.unitconverter;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -57,6 +58,12 @@ public class ChangeUnits extends Activity {
 				if(selectedFrom.equals(selectedTo)){
 					Toast.makeText(ChangeUnits.this, getResources().getString(R.string.changeUnitsSilly).toString(), Toast.LENGTH_LONG).show();
 				} else{
+					
+					SharedPreferences.Editor editor = getSharedPreferences(UnitConvert.Prefs_FileName, 0).edit();
+					editor.putString("from", selectedFrom);
+					editor.putString("to", selectedTo);
+					editor.commit();
+					
 					Intent converter = new Intent(ChangeUnits.this, UnitConvert.class);
 				
 					converter.putExtra("from", selectedFrom);
