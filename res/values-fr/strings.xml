@@ -1,12 +1,17 @@
 <resources>
 
     <string name="app_name">Convertisseur d\'unités</string>
-    <string name="menu_settings">Réglages</string>
     <string name="title_activity_unit_convert">Convertisseur d\'unités</string>
     <string name="title_activity_about">Sur</string>
     <string name="DevEmail">robert@robertshippey.net</string>
     <string name="DevWebsite">http://robertshippey.net</string>
     <string name="title_activity_change_units">Changer les Unités</string>
+    <string-array name="units">
+        <item >mm</item>
+        <item >cm</item>
+        <item >in</item>
+        <item >ft</item>
+    </string-array>
     <string name="done">Fini</string>
     <string name="convertFrom">Frais de port à partir de</string>
     <string name="convertTo">Convertir en</string>

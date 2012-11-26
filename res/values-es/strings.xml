@@ -1,12 +1,17 @@
 <resources>
 
     <string name="app_name">Unit Converter</string>
-    <string name="menu_settings">Configuración</string>
     <string name="title_activity_unit_convert">Unit Converter</string>
     <string name="title_activity_about">Sobre</string>
     <string name="DevEmail">robert@robertshippey.net</string>
     <string name="DevWebsite">http://robertshippey.net</string>
     <string name="title_activity_change_units">Cambio de las unidades</string>
+    <string-array name="units">
+        <item >mm</item>
+        <item >cm</item>
+        <item >in</item>
+        <item >ft</item>
+    </string-array>
     <string name="done">Terminado</string>
     <string name="convertFrom">Convertir de</string>
     <string name="convertTo">Convierta a</string>
