@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">Unit Converter</string>
+    <string name="menu_settings">Configuración</string>
+    <string name="title_activity_unit_convert">Unit Converter</string>
+    <string name="title_activity_about">Sobre</string>
+    <string name="DevEmail">robert@robertshippey.net</string>
+    <string name="DevWebsite">http://robertshippey.net</string>
+    <string name="title_activity_change_units">Cambio de las unidades</string>
+    <string name="done">Terminado</string>
+    <string name="convertFrom">Convertir de</string>
+    <string name="convertTo">Convierta a</string>
+    <string name="about">Sobre</string>
+    <string name="changeUnits">Cambio de las unidades</string>
+    <string name="converter">Convertidor</string>
+    <string name="processing">Transformación…</string>
+    <string name="error">Error!</string>
+    <string name="devName">Robert Shippey</string>
+    <string name="uni">Nottingham Trent University</string>
+    <string name="aboutDescription">"Convertidor de la unidad creada para Pervasive Computing. "</string>
+    <string name="emailMe">Envíeme por correo electrónico!</string>
+    <string name="website">Sitio Web!!</string>
+    <string name="UnitConverterChangeUnitHint">Sugerencia: Pulse el botón de menú para cambiar las unidades!</string>
+    <string name="changeUnitsSilly">No escoja una combinación aburrido!\nConvertir de algo con otra cosa.</string>
+	<string name="notanumber">Prueba a introducir un número!</string>
+    
+</resources>
