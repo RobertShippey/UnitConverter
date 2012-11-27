@@ -70,6 +70,11 @@ public class UnitConvert extends Activity implements OnClickListener {
 		done.setOnClickListener(this);
 
 	}
+	
+	public void onStop(){
+		db.close();
+		super.onStop();
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -101,9 +106,9 @@ public class UnitConvert extends Activity implements OnClickListener {
 		try {
 			toUnit.setText(getResources().getString(R.string.processing)
 					.toString());
-			float from = Float.parseFloat(fromUnit.getText().toString());
-			float to = 0.0f;
-			float factor = 0.0f;
+			double from = Double.parseDouble(fromUnit.getText().toString());
+			double to = 0.0;
+			double factor = 0.0;
 			
 			Cursor c = db.query(
 				    UnitDatabase.tableName, 
@@ -113,7 +118,7 @@ public class UnitConvert extends Activity implements OnClickListener {
 				    null, null, null);
 			
 			c.moveToFirst();
-			factor = c.getFloat(0);
+			factor = c.getDouble(0);
 			c.close();
 
 			to = from * factor;

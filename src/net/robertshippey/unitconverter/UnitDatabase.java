@@ -13,18 +13,18 @@ public class UnitDatabase implements BaseColumns {
 	public static final String columnFactor = "factor";
 	
 	private static Row[] data = {
-		new Row("in", "cm", 2.54f),
-		new Row("in", "ft", 0.0833333f),
-		new Row("in", "mm", 25.4f),	
-		new Row("ft", "mm", 304.8f),
-		new Row("ft", "cm", 30.48f),
-		new Row("ft", "in", 12.0f),
-		new Row("cm", "mm", 10.0f),
-		new Row("cm", "ft", 0.032808399f),
-		new Row("cm", "in", 0.32808399f),
-		new Row("mm", "cm", 0.1f),
-		new Row("mm", "ft", 0.0032808399f),
-		new Row("mm", "in", 0.0393700787f)};
+		new Row("in", "cm", 2.54),
+		new Row("in", "ft", 0.083333333),
+		new Row("in", "mm", 25.4),	
+		new Row("ft", "mm", 304.8),
+		new Row("ft", "cm", 30.48),
+		new Row("ft", "in", 12.0),
+		new Row("cm", "mm", 10.0),
+		new Row("cm", "ft", 0.032808399),
+		new Row("cm", "in", 0.393700787),
+		new Row("mm", "cm", 0.1),
+		new Row("mm", "ft", 0.0032808399999),
+		new Row("mm", "in", 0.0393700787)};
 	
 	private UnitDatabase() {}
 	
@@ -70,9 +70,9 @@ public class UnitDatabase implements BaseColumns {
 	private static class Row {
 		public String from;
 		public String to;
-		public float factor;
+		public double factor;
 		
-		public Row (String f, String t, float fa){
+		public Row (String f, String t, double fa){
 			from = f;
 			to = t;
 			factor = fa;
