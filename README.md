@@ -46,4 +46,4 @@ Pervasive Computing converter android app.
 +------+---------------------+--------------------------------------+
 ```
 
-* = Checked by an actual native speaker.
+\* = Checked by an actual native speaker.
