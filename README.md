@@ -40,9 +40,10 @@ Pervasive Computing converter android app.
 |      |                     | queried, rather than lots of if()'s, |
 |      |                     | when needed                          |
 |      +---------------------+--------------------------------------+
-|      | Other               | Localized to German, French, and     |
+|      | Other               | Localized to German*, French, and    |
 |      |                     | Spanish using localised string.xml   |
 |      |                     | files (the recomended Android way)   |
 +------+---------------------+--------------------------------------+
 ```
 
+* = Checked by an actual native speaker.

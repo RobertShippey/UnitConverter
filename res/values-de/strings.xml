@@ -1,11 +1,11 @@
 <resources>
 
-    <string name="app_name">Unit Converter</string>
-    <string name="title_activity_unit_convert">Unit Converter</string>
-    <string name="title_activity_about">Über</string>
+    <string name="app_name">Einheitenrechner</string>
+    <string name="title_activity_unit_convert">Einheitenrechner</string>
+    <string name="title_activity_about">Info</string>
     <string name="DevEmail">robert@robertshippey.net</string>
     <string name="DevWebsite">http://robertshippey.net</string>
-    <string name="title_activity_change_units">Maßeinheiten ändern</string>
+    <string name="title_activity_change_units">Einheiten ändern</string>
     <string-array name="units">
         <item >mm</item>
         <item >cm</item>
@@ -14,19 +14,19 @@
     </string-array>
     <string name="done">Erledigt</string>
     <string name="convertFrom">Konvertieren von</string>
-    <string name="convertTo">Zu konvertieren</string>
-    <string name="about">Über</string>
-    <string name="changeUnits">Maßeinheiten ändern</string>
+    <string name="convertTo">Konvertieren in</string>
+    <string name="about">Info</string>
+    <string name="changeUnits">Einheiten ändern</string>
     <string name="converter">Konverter</string>
     <string name="processing">Verarbeitung…</string>
     <string name="error">Fehler!</string>
     <string name="devName">Robert Shippey</string>
     <string name="uni">Nottingham Trent University</string>
-    <string name="aboutDescription">"Unit Converter für Pervasive Computing geschaffen. "</string>
-    <string name="emailMe">Bitte schicken Sie mir!</string>
+    <string name="aboutDescription">Ein Einheitenrechner für Pervasive Computing.</string>
+    <string name="emailMe">Schreiben Sie mir</string>
     <string name="website">Webseite!</string>
-    <string name="UnitConverterChangeUnitHint">Hinweis: Drücken Sie die Menü-Taste, um die Maßeinheiten zu ändern!</string>
-    <string name="changeUnitsSilly">Pflücken Sie keine langweilige Kombination!\nKonvertieren von etwas, um etwas anderes.</string>
-	<string name="notanumber">Versuchen Sie, eine Zahl!</string>
+    <string name="UnitConverterChangeUnitHint">Hinweis: Drücken Sie die Menü-Taste, um die Maßeinheiten zu ändern.</string>
+    <string name="changeUnitsSilly">Wähle eine spannende Kombination!\nKonvertiere etwas in etwas Anderes.</string>
+	<string name="notanumber">Versuch’s mit einer Zahl!</string>
     
 </resources>
